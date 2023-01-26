@@ -1,4 +1,4 @@
-package com.system.Flatform.API;
+package com.system.Flatform.api;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-//@RequestMapping("/")
 public class UserAPI {
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public ResponseEntity test() {
         return ResponseEntity.ok().body("OK!!!!!");
     }
