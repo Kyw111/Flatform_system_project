@@ -30,8 +30,10 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/", "/login", "/test").permitAll()
+        http.cors().disable()
+                .csrf().disable()// post 방식으로 값을 전송할 때, token 을 사용해야하는 보안 설정 해제
+                .authorizeRequests()
+                .antMatchers("/", "/login", "/test", "/sign").permitAll()
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER")
                 .anyRequest().authenticated(); // 그 외 모든 요청에 대해 인증 필요

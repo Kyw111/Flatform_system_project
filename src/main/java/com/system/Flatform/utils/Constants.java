@@ -8,6 +8,9 @@ import lombok.Getter;
 @Getter
 public class Constants {
 
+    public final static String ROLE_ADIN = "ADMIN";
+    public final static String ROLE_USER = "USER";
+
     public final static String CREATE_SUCCESS = "등록 성공!";
     public final static String UPDATE_SUCCESS = "수정 성공!";
     public final static String DELETE_SUCCESS = "삭제 성공!";
