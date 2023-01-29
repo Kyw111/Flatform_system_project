@@ -11,6 +11,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * 회원 entity
+ */
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @DynamicUpdate
 @Getter
